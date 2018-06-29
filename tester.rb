@@ -56,9 +56,9 @@
   }
 ]
 
-
-p @customers[0][:cash].to_i
-
+p @customers[0][:cash]
+p @customers[0][:cash] -= 100
+p @customers[0][:cash]
 # for pet in @pet_shop[:pets]
 #   if pet[:name] == pet[:name]
 #     p pet[:name]
