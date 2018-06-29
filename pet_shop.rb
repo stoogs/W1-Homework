@@ -69,9 +69,9 @@ customer[:cash] -= cash_amount
 return customer[:cash]
 end
 #15
-# def customer_pet_count(customer)      #####Need to figure length of 1, not 0
-# return [:pets]
-# end
+def customer_pet_count(customer)      #####Need to figure length of 1, not 0
+return customer[:pets].length
+end
 #16
 def add_pet_to_customer(customer, new_pet)
 return customer[:pets] << new_pet
