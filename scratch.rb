@@ -66,17 +66,19 @@
 
 
 
-
-
+pet_shop = @pet_shop
+p pet_shop[:name]
+pet_shop[:name] << @new_pet
+return pet_shop[:name].length
 
   #p @customers[0][:pets].length
-  customer = @customers[0]
-p customer[:pets]
-pet = customer[:pets] << {
-  name: "Miaow Miaow",
-  pet_type: :cat,
-  breed: "lazy",
-  price: 325
-}
-
-p pet
+#   customer = @customers[0]
+# p customer[:pets]
+# pet = customer[:pets] << {
+#   name: "Miaow Miaow",
+#   pet_type: :cat,
+#   breed: "lazy",
+#   price: 325
+# }
+#
+# p pet
