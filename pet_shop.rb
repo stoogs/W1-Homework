@@ -19,7 +19,6 @@ def total_cash(pet_shop)
 return pet_shop[:admin][:total_cash]
 end
 
-def add_or_remove_cash(pet_shop, add_cash)
-return pet_shop[:admin][:total_cash] += add_cash
-
+def add_or_remove_cash(pet_shop, cash)
+return pet_shop[:admin][:total_cash] += cash
 end
