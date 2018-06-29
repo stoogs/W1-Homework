@@ -44,14 +44,24 @@ def pets_by_breed(pet_shop, breed)
   end
   return breed_count
 end
-#9 & 10 ???
-def find_pet_by_name(pet_shop, name)    ###### RETURNS NIL, NO PROBLEM #####
+#9 & 10 ???    9 is BROKEN
+# def test_find_pet_by_name__returns_pet
+#9
+# def find_pet_by_name(pet_shop, name)
+#   for pet in pet_shop[:pets]
+#     if pet[:name] == name
+#     return pet
+# end
+# end
+# end
+
+#10
+def find_pet_by_name(pet_shop, name)
   for pet in pet_shop[:pets]
-    if pet[:name] == name
-    correct = name
-    end
-    return correct
-  end
+    if pet[:name] != name
+    return nil
+end
+end
 end
 
 #11
