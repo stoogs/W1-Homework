@@ -43,16 +43,34 @@
   },
   name: "Camelot of Pets"
 }
+@customers = [
+  {
+    name: "Alice",
+    pets: [],
+    cash: 1000
+  },
+  {
+    name: "Bob",
+    pets: [],
+    cash: 50
+  }
+]
 
 
+p @customers[0][:cash].to_i
 
+# for pet in @pet_shop[:pets]
+#   if pet[:name] == pet[:name]
+#     p pet[:name]
+#   end
+# end
 
-breed_count = []
-
-  for pet in @pet_shop[:pets]
-  p pet[:breed]
-  if pet[:breed] == breed
-    breed_count << pet[:breed]
-  end
-  p pet[:breed]
-end
+# breed_count = []
+#
+#   for pet in @pet_shop[:pets]
+#   p pet[:breed]
+#   if pet[:breed] == breed
+#     breed_count << pet[:breed]
+#   end
+#   p pet[:breed]
+# end

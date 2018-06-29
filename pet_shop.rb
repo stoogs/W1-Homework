@@ -36,14 +36,28 @@ return pet_shop[:pets].length
 end
 
 def pets_by_breed(pet_shop, breed)
-
   breed_count = []
-
   for pet in pet_shop[:pets]
+    if pet[:breed] == breed
+      breed_count << pet[:breed]
+    end
+  end
+  return breed_count
+end
 
-  if pet[:breed] == breed
-    breed_count << pet[:breed]
+def find_pet_by_name(pet_shop, name)    ###### RETURNS NIL, NO PROBLEM #####
+  for pet in pet_shop[:pets]
+    if pet[:name] == name
+    correct = name
+    end
+    return correct
   end
 end
-return breed_count
+
+
+
+
+def customer_cash(customers)
+cash = customers[:cash]
+return cash
 end
