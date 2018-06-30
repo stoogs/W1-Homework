@@ -120,11 +120,12 @@ class TestPetShop < Minitest::Test
     pets = pets_by_breed(@pet_shop, "Dalmation")
     assert_equal(0, pets.count)
   end
+
 #9
-  # def test_find_pet_by_name__returns_pet
-  #   pet = find_pet_by_name(@pet_shop, "Arthur")
-  #   assert_equal("Arthur", pet[:name])
-  # end
+  def test_find_pet_by_name__returns_pet
+    pet = find_pet_by_name(@pet_shop, "Arthur")
+    assert_equal("Arthur", pet[:name])
+  end
 #10
   def test_find_pet_by_name__returns_nil
     pet = find_pet_by_name(@pet_shop, "Fred")

@@ -44,41 +44,28 @@ def pets_by_breed(pet_shop, breed)
   end
   return breed_count
 end
-#9 & 10 ???    9 is BROKEN
-# def test_find_pet_by_name__returns_pet
 #9
-# def find_pet_by_name(pet_shop, name)
-#   for pet in pet_shop[:pets]
-#     if pet[:name] == name
-#     return pet
-# end
-# end
-# end
-
-#10
 def find_pet_by_name(pet_shop, name)
   for pet in pet_shop[:pets]
-    if pet[:name] != name
-    return nil
+    if pet[:name] == name
+      return pet
+    end
+  end
+  return nil
 end
-end
-end
-
 #11
 def remove_pet_by_name(pet_shop, name)
   for pet in pet_shop[:pets]
     if pet[:name] == name
-    pet[:name].delete
+    pet_shop[:pets].delete(pet)
     end
-    return pet[:name]
   end
-end
+ end
 #12
 def add_pet_to_stock(pet_shop, new_pet)
   pet_shop[:pets] << new_pet
   return pet_shop[:pets].length
 end
-
 #13
 def customer_cash(customers)
 cash = customers[:cash]
