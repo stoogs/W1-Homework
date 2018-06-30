@@ -98,14 +98,11 @@ end
 
 #3a
 def sell_pet_to_customer(pet_shop, pet, customer)
-if customer[:cash] >= pet[:price]
+if pet != nil && customer[:cash] >= pet[:price]
 customer[:pets] << pet
 pet_shop[:admin][:pets_sold] += 1
 customer[:cash] -= pet[:price]
 pet_shop[:admin][:total_cash] += pet[:price]
-end
-end
 
-def sell_pet_to_customer(pet_shop, pet, customer)
-
+end
 end
