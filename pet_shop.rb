@@ -36,31 +36,49 @@ return pet_shop[:pets].length
 end
 #8
 def pets_by_breed(pet_shop, breed)
-  breed_count = []
-  for pet in pet_shop[:pets]
-    if pet[:breed] == breed
-      breed_count << pet[:breed]
-    end
+  count = []
+  pet_shop[:pets].each do |pets|
+  count << pets[:breed] if pets[:breed] == breed
   end
-  return breed_count
+  return count
 end
+## Refactored.
+#   breed_count = []
+#   for pet in pet_shop[:pets]
+#     if pet[:breed] == breed
+#       breed_count << pet[:breed]
+#     end
+#   end
+#   return breed_count
+# end
 #9
 def find_pet_by_name(pet_shop, name)
-  for pet in pet_shop[:pets]
-    if pet[:name] == name
-      return pet
-    end
+  pet_shop[:pets].each do |pet|
+    return pet if pet[:name] == name
   end
-  return nil
-end
+    return nil
+  end
+## Refactored.
+#   for pet in pet_shop[:pets]
+#     if pet[:name] == name
+#       return pet
+#     end
+#   end
+#   return nil
+# end
 #11
 def remove_pet_by_name(pet_shop, name)
-  for pet in pet_shop[:pets]
-    if pet[:name] == name
-    pet_shop[:pets].delete(pet)
+  pet_shop[:pets].each do |pet|
+    pet_shop[:pets].delete(pet) if pet[:name] == name
     end
   end
- end
+ ## Refactored.
+ #  for pet in pet_shop[:pets]
+ #    if pet[:name] == name
+ #    pet_shop[:pets].delete(pet)
+ #    end
+ #  end
+ # end
 #12
 def add_pet_to_stock(pet_shop, new_pet)
   pet_shop[:pets] << new_pet
@@ -94,7 +112,6 @@ else
 return false
 end
 end
-
 
 #3a
 def sell_pet_to_customer(pet_shop, pet, customer)
